@@ -3,7 +3,32 @@ Input: an integer
 Returns: an integer
 '''
 def eating_cookies(n):
-    # Your code here
+    
+    if n <= 3:
+        if n == 3:
+            return 4
+        elif n ==2: 
+            return 2
+        elif n == 1:
+            return 1
+        elif n == 0:
+            return 1
+        else:
+            return 0
+    else:
+        back_3 = 1
+        back_2 = 2
+        back_1 = 4
+        current = back_1+back_2+back_3
+        counter = 4
+
+        while counter < n:
+            back_3 = back_2
+            back_2 = back_1
+            back_1 = current
+            current = back_1+back_2+back_3
+            counter += 1
+    return current
 
     pass
 

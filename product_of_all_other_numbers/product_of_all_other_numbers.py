@@ -5,7 +5,22 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Your code here
 
-    pass
+    # catch array for computed numbers
+    # loop through the array
+    # based on length and position, calculate product and append
+
+    # could also just multiple everything and divide by value at current index?
+
+    computed = [0]*len(arr)
+    product = 1
+    for num in range(len(arr)):
+        product = product * arr[num]
+    
+    for num in range(len(computed)):
+        computed[num] = int(product//arr[num])
+    
+
+    return computed
 
 
 if __name__ == '__main__':
